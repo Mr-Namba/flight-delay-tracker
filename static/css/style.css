@@ -1,0 +1,19 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+.controls, .actions {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.chart-container {
+    width: 80%;
+    margin: auto;
+}
+

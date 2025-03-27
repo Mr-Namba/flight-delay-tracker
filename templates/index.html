@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Flight Delay Tracker</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+    <h1>Flight Delay Tracker</h1>
+    
+    <div class="controls">
+        <label for="reasonSelect">Select Reason:</label>
+        <select id="reasonSelect">
+            <option value="out body">Out body</option>
+            <option value="out 1-dot battery">Out 1-dot battery</option>
+            <option value="out of 2 dot battery">Out of 2 dot battery</option>
+            <option value="out of 3 dot battery">Out of 3 dot battery</option>
+        </select>
+        <button id="startBtn">Start Delay</button>
+        <button id="endBtn">End Delay</button>
+    </div>
+    
+    <div class="actions">
+        <button id="downloadBtn">Download CSV</button>
+        <button id="resetBtn">Reset Data</button>
+    </div>
+    
+    <div class="chart-container">
+        <canvas id="delayChart"></canvas>
+    </div>
+    
+    <div id="totalDuration">
+        Total Delay Duration: <span id="totalMinutes">0</span> minutes
+    </div>
+    
+    <script src="{{ url_for('static', filename='js/script.js') }}"></script>
+</body>
+</html>
+
